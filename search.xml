@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>windows 下安装 Python 虚拟环境</title>
+      <link href="/2020/06/24/windows%E4%B8%8B%E5%AE%89%E8%A3%85Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+      <url>/2020/06/24/windows%E4%B8%8B%E5%AE%89%E8%A3%85Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</url>
+      
+        <content type="html"><![CDATA[<p>主要介绍如何 在 Windows 下使用 virtualenv 创建 Python3 虚拟环境，存储新建虚拟环境是在自定义的环境变量目录下。 </p><a id="more"></a><h2 id="1、安装-virtualenvwrapper"><a href="#1、安装-virtualenvwrapper" class="headerlink" title="1、安装 virtualenvwrapper"></a>1、安装 virtualenvwrapper</h2><p>安装命令，windows 系统,在非 scripts 目录下运行</p><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pip</span> <span class="string">install virtualenvwrapper-win （安装）</span></span><br><span class="line"><span class="attr">pip</span> <span class="string">uninstall virtualenvwrapper (卸载)</span></span><br></pre></td></tr></table></figure><h2 id="2、配置虚拟环境安装路径"><a href="#2、配置虚拟环境安装路径" class="headerlink" title="2、配置虚拟环境安装路径"></a>2、配置虚拟环境安装路径</h2><p>系统变量已有默认指定环境变量，修改为你想要存储新建的虚拟环境的位置</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">WORKON_HOME</span>=<span class="string">'D:\myinstall\python\pythonenv'</span></span><br></pre></td></tr></table></figure><h2 id="3、虚拟环境操作"><a href="#3、虚拟环境操作" class="headerlink" title="3、虚拟环境操作"></a>3、虚拟环境操作</h2><p>创建虚拟环境，会自动切换到创建好的虚拟环境</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mkvirtualenv virtualenv_name</span></span><br></pre></td></tr></table></figure><p>切换到某个虚拟环境</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">workon other_virtualenv_name</span></span><br></pre></td></tr></table></figure><p>退出当前虚拟环境</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deactivate</span></span><br></pre></td></tr></table></figure><p>删除某个虚拟环境</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rmvirtualenv virtualenv_name</span></span><br></pre></td></tr></table></figure><p>列出所有虚拟环境</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">lsvirtualenv</span></span><br></pre></td></tr></table></figure><p>切换到虚拟环境的目录</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cdvirtualenv</span></span><br></pre></td></tr></table></figure><p>创建虚拟环境的时候指定python版本<br>在使用 <code>mkvirtualenv</code> 的时候，可以指定 <code>--python</code> 的参数来指定具体的 python 路径</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv --<span class="keyword">python</span>==C:\python37\<span class="keyword">python</span>.<span class="keyword">exe</span> virtualenv_name</span><br></pre></td></tr></table></figure><p>列出当前虚拟环境下所有 pip 安装的依赖包</p><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="built_in">list</span></span><br></pre></td></tr></table></figure><h2 id="4、检查-wrapper-下的目录文件"><a href="#4、检查-wrapper-下的目录文件" class="headerlink" title="4、检查 wrapper 下的目录文件"></a>4、检查 wrapper 下的目录文件</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">workon</span></span><br></pre></td></tr></table></figure><h2 id="5、在虚拟环境下安装工具包"><a href="#5、在虚拟环境下安装工具包" class="headerlink" title="5、在虚拟环境下安装工具包"></a>5、在虚拟环境下安装工具包</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i <span class="string">https:</span><span class="comment">//pypi.douban.com/simple scrapy   (使用豆瓣源)</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 语言学习 </tag>
+            
+            <tag> Python3 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Volantis 主题下优化博客</title>
       <link href="/2020/05/24/Volantis%E4%B8%BB%E9%A2%98%E4%B8%8B%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2/"/>
       <url>/2020/05/24/Volantis%E4%B8%BB%E9%A2%98%E4%B8%8B%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2/</url>
