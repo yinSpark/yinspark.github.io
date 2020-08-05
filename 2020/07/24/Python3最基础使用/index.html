@@ -16,7 +16,7 @@
 
   <!-- 页面元数据 -->
   
-    <title>Python3最基础使用 - 伊小宝</title>
+    <title>Python3 最基础使用 - 伊小宝</title>
   
     <meta name="keywords" content="语言学习,Python3">
   
@@ -366,8 +366,8 @@
         
           
   <h1 class="title">
-    <a href="/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
-      Python3最基础使用
+    <a href="/2020/07/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+      Python3 最基础使用
     </a>
   </h1>
 
@@ -405,7 +405,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年6月24日</p>
+    <p>发布于：2020年7月24日</p>
   </a>
 </div>
 
@@ -432,6 +432,14 @@
 <a id="more"></a>
 
 <h2 id="查看Python3-版本"><a href="#查看Python3-版本" class="headerlink" title="查看Python3 版本"></a>查看Python3 版本</h2><p><code>python -V</code></p>
+<p><code>python3 --version</code></p>
+<h2 id="Python3-交互式编程"><a href="#Python3-交互式编程" class="headerlink" title="Python3 交互式编程"></a>Python3 交互式编程</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">python</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Python3-脚本式编程"><a href="#Python3-脚本式编程" class="headerlink" title="Python3 脚本式编程"></a>Python3 脚本式编程</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">python</span> hello.<span class="keyword">py</span></span><br></pre></td></tr></table></figure>
+
+<p>若无法执行，需修改权限：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>chmod +x hello.py</span><br></pre></td></tr></table></figure>
+
 <h2 id="Python3-基础语法"><a href="#Python3-基础语法" class="headerlink" title="Python3 基础语法"></a>Python3 基础语法</h2><h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>默认情况下，Python 3 源码文件以 UTF-8 编码，所有字符串都是 unicode 字符串。 当然你也可以为源码文件指定不同的编码：</p>
 <p><code># -*- coding: utf-8 -*-</code></p>
 <p>上述定义允许在源文件中使用 Windows-1252 字符集中的字符编码，对应适合语言为保加利亚语、白罗斯语、马其顿语、俄语、塞尔维亚语。</p>
@@ -448,6 +456,9 @@
 
 <p>多行注释可以用多个 # 号，还有 ‘’’ 和 “””：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 第一个注释</span></span><br><span class="line"><span class="comment"># 第二个注释</span></span><br><span class="line"> </span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">第三注释</span></span><br><span class="line"><span class="string">第四注释</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"> </span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">第五注释</span></span><br><span class="line"><span class="string">第六注释</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"Hello, Python!"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>以下实例我们可以输出函数的注释：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">'''这是文档字符串'''</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">print(a.__doc__)</span><br></pre></td></tr></table></figure>
 
 <h3 id="行与缩进"><a href="#行与缩进" class="headerlink" title="行与缩进"></a>行与缩进</h3><p>python最具特色的就是使用缩进来表示代码块，不需要使用大括号 {} 。</p>
 <p>缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数。实例如下：python最具特色的就是使用缩进来表示代码块，不需要使用大括号 {} 。</p>
@@ -478,12 +489,16 @@
 <li>Python中的字符串不能改变。</li>
 <li>Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。</li>
 <li>字符串的截取的语法格式如下：变量[头下标:尾下标:步长]</li>
+<li>当字符串内容为浮点型要转换为整型时，无法直接用 int() 转换：需要把字符串先转化成 float 型再转换成 int 型</li>
 </ul>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">word</span> = <span class="string">'字符串'</span></span><br><span class="line"><span class="attr">sentence</span> = <span class="string">"这是一个句子。"</span></span><br><span class="line"><span class="attr">paragraph</span> = <span class="string">"""这是一个段落，</span></span><br><span class="line"><span class="string">可以由多行组成"""</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line">str=<span class="string">'Runoob'</span></span><br><span class="line"> </span><br><span class="line">print(str)                 <span class="comment"># 输出字符串</span></span><br><span class="line">print(str[<span class="number">0</span>:<span class="number">-1</span>])           <span class="comment"># 输出第一个到倒数第二个的所有字符</span></span><br><span class="line">print(str[<span class="number">0</span>])              <span class="comment"># 输出字符串第一个字符</span></span><br><span class="line">print(str[<span class="number">2</span>:<span class="number">5</span>])            <span class="comment"># 输出从第三个开始到第五个的字符</span></span><br><span class="line">print(str[<span class="number">2</span>:])             <span class="comment"># 输出从第三个开始后的所有字符</span></span><br><span class="line">print(str * <span class="number">2</span>)             <span class="comment"># 输出字符串两次</span></span><br><span class="line">print(str + <span class="string">'你好'</span>)        <span class="comment"># 连接字符串</span></span><br><span class="line"> </span><br><span class="line">print(<span class="string">'------------------------------'</span>)</span><br><span class="line"> </span><br><span class="line">print(<span class="string">'hello\nrunoob'</span>)      <span class="comment"># 使用反斜杠(\)+n转义特殊字符</span></span><br><span class="line">print(<span class="string">r'hello\nrunoob'</span>)     <span class="comment"># 在字符串前面添加一个 r，表示原始字符串，不会发生转义</span></span><br></pre></td></tr></table></figure>
 
 <p>这里的 r 指 raw，即 raw string。</p>
+<p>三个双引号赋值给字符串变量时，表示一种字符串的特殊写法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>str=<span class="string">"""I</span></span><br><span class="line"><span class="string"><span class="meta">... </span>want</span></span><br><span class="line"><span class="string"><span class="meta">... </span>you"""</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str</span><br><span class="line"><span class="string">'I\nwant\nyou'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(str)</span><br><span class="line">I</span><br><span class="line">want</span><br><span class="line">you</span><br></pre></td></tr></table></figure>
+
 <h3 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h3><p>函数之间或类的方法之间用空行分隔，表示一段新的代码的开始。类和函数入口之间也用一行空行分隔，以突出函数入口的开始。</p>
 <p>空行与代码缩进不同，空行并不是Python语法的一部分。书写时不插入空行，Python解释器运行也不会出错。但是空行的作用在于分隔两段不同功能或含义的代码，便于日后代码的维护或重构。</p>
 <p>记住：空行也是程序代码的一部分</p>
@@ -512,12 +527,34 @@
 <p>从某个模块中导入某个函数,格式为： from somemodule import somefunction</p>
 <p>从某个模块中导入多个函数,格式为： from somemodule import firstfunc, secondfunc, thirdfunc</p>
 <p>将某个模块中的全部函数导入，格式为： from somemodule import *</p>
+<p>将模块换个别名，例如：import time as abc，在引用时格式为：abc.sleep(1)。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"><span class="builtin-name">print</span>(<span class="string">'================Python import mode=========================='</span>)</span><br><span class="line"><span class="builtin-name">print</span> (<span class="string">'命令行参数为:'</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sys.argv:</span><br><span class="line">    <span class="builtin-name">print</span> (i)</span><br><span class="line"><span class="builtin-name">print</span> (<span class="string">'\n python 路径为'</span>,sys.path)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> argv,path  <span class="comment">#  导入特定的成员</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">'================python from import==================================='</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'path:'</span>,path) <span class="comment"># 因为已经导入path成员，所以此处引用时不需要加sys.path</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><p>很多程序可以执行一些操作来查看一些基本信息，Python可以使用-h参数查看各参数帮助信息：</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">python</span> -h</span><br><span class="line">usage: <span class="keyword">python</span> [option] ... [-<span class="keyword">c</span> cmd | -<span class="keyword">m</span> <span class="keyword">mod</span> | <span class="keyword">file</span> | -] [arg] ...</span><br><span class="line">Options <span class="built_in">and</span> arguments (<span class="built_in">and</span> corresponding environment variables):</span><br><span class="line">-<span class="keyword">c</span> cmd : program passed in <span class="keyword">as</span> <span class="built_in">string</span> (terminates option <span class="keyword">list</span>)</span><br><span class="line">-d     : <span class="keyword">debug</span> output from parser (also PYTHONDEBUG=<span class="keyword">x</span>)</span><br><span class="line">-E     : ignore environment variables (such <span class="keyword">as</span> PYTHONPATH)</span><br><span class="line">-h     : <span class="keyword">print</span> this <span class="keyword">help</span> message <span class="built_in">and</span> <span class="keyword">exit</span></span><br><span class="line"></span><br><span class="line">[ etc. ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="第一行注释"><a href="#第一行注释" class="headerlink" title="第一行注释"></a>第一行注释</h3><p>第一行注释标的是指向 python 的路径，告诉操作系统执行这个脚本的时候，调用 /usr/bin 下的 python 解释器。<br>在 Windows 下可以不写第一行注释:</p>
+<figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/python3</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env python3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="help-函数"><a href="#help-函数" class="headerlink" title="help() 函数"></a>help() 函数</h3><p>调用 python 的 help() 函数可以打印输出一个函数的文档字符串：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如下实例，查看 max 内置函数的参数列表和规范的文档</span></span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; help(max)</span><br><span class="line">……显示帮助信息……</span><br></pre></td></tr></table></figure>
+
+<p>如果仅仅想得到文档字符串：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; print(max.__doc_<span class="number">_</span>)    <span class="comment"># 注意，doc的前后分别是两个下划线</span></span><br></pre></td></tr></table></figure>
+
+<p>要善用 help() 方法<br>通过命令 help(“print”) 我们知道这个方法里第三个为缺省参数 sep=’ ‘。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; help(<span class="string">"print"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="“Windows-命令行窗口”下清屏"><a href="#“Windows-命令行窗口”下清屏" class="headerlink" title="“Windows 命令行窗口”下清屏"></a>“Windows 命令行窗口”下清屏</h3><p>第一种方法，在命令行窗口输入：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; import os</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; i=os.system(<span class="string">"cls"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>第二种方法，在命令行窗口输入：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; import subprocess</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; i=subprocess.call(<span class="string">"cls"</span>, shell=True)</span><br></pre></td></tr></table></figure>
+
 
           
             <div class='article_footer'>
@@ -554,7 +591,7 @@
           
         
           
-            <p>本文永久链接是：<a href=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/>https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</a></p>
+            <p>本文永久链接是：<a href=https://yinspark.github.io/2020/07/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/>https://yinspark.github.io/2020/07/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</a></p>
           
         
       </blockquote>
@@ -605,10 +642,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-24T09:07:17+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-24T09:07:17+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年6月24日</p>
+    <p>更新于：2020年7月24日</p>
   </a>
 </div>
 
@@ -635,7 +672,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3最基础使用 - 伊小宝&summary=Python3 最基础使用"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yinspark.github.io/2020/07/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3 最基础使用 - 伊小宝&summary=Python3 最基础使用"
           
           >
           
@@ -647,7 +684,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3最基础使用 - 伊小宝&summary=Python3 最基础使用"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yinspark.github.io/2020/07/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3 最基础使用 - 伊小宝&summary=Python3 最基础使用"
           
           >
           
@@ -659,7 +696,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3最基础使用 - 伊小宝&summary=Python3 最基础使用"
+          href="http://service.weibo.com/share/share.php?url=https://yinspark.github.io/2020/07/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3 最基础使用 - 伊小宝&summary=Python3 最基础使用"
           
           >
           
@@ -683,8 +720,8 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/06/24/Python3%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python3命令行参数</p>
+              <a class='prev' href='/2020/07/25/Python3%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python3 命令行参数</p>
                 <p class='content'>getopt模块
 
 
@@ -695,12 +732,12 @@ Python 中也...</p>
               </a>
             
             
-              <a class='next' href='/2020/05/24/Volantis%E4%B8%BB%E9%A2%98%E4%B8%8B%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2/'>
-                <p class='title'>Volantis 主题下优化博客<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>CDN 加速、主页文章只显示摘要
+              <a class='next' href='/2020/06/24/windows%E4%B8%8B%E5%AE%89%E8%A3%85Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/'>
+                <p class='title'>windows 下安装 Python 虚拟环境<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>主要介绍如何 在 Windows 下使用 virtualenv 创建 Python3 虚拟环境，存储新建虚拟环境是在自定义的环境变量目录下。 
 
 
-一、免费 CDN 搭建jsDelivr + Github 是免费且好用的CDN。使用方法：https://cdn.jsdelivr.net/gh/你的用户名...</p>
+1、安装 virtualenvwrapper安...</p>
               </a>
             
           </div>
@@ -745,7 +782,7 @@ Python 中也...</p>
 
   <script>
     window.subData = {
-      title: 'Python3最基础使用',
+      title: 'Python3 最基础使用',
       tools: true
     }
   </script>
@@ -771,7 +808,7 @@ Python 中也...</p>
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Python3-版本"><span class="toc-text">查看Python3 版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python3-基础语法"><span class="toc-text">Python3 基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编码"><span class="toc-text">编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python保留字"><span class="toc-text">python保留字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行与缩进"><span class="toc-text">行与缩进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多行语句"><span class="toc-text">多行语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字-Number-类型"><span class="toc-text">数字(Number)类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串-String"><span class="toc-text">字符串(String)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空行"><span class="toc-text">空行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#等待用户输入"><span class="toc-text">等待用户输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同一行显示多条语句"><span class="toc-text">同一行显示多条语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多个语句构成代码组"><span class="toc-text">多个语句构成代码组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Print-输出"><span class="toc-text">Print 输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import-与-from…import"><span class="toc-text">import 与 from…import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行参数"><span class="toc-text">命令行参数</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Python3-版本"><span class="toc-text">查看Python3 版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python3-交互式编程"><span class="toc-text">Python3 交互式编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python3-脚本式编程"><span class="toc-text">Python3 脚本式编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python3-基础语法"><span class="toc-text">Python3 基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编码"><span class="toc-text">编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python保留字"><span class="toc-text">python保留字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行与缩进"><span class="toc-text">行与缩进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多行语句"><span class="toc-text">多行语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字-Number-类型"><span class="toc-text">数字(Number)类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串-String"><span class="toc-text">字符串(String)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空行"><span class="toc-text">空行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#等待用户输入"><span class="toc-text">等待用户输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同一行显示多条语句"><span class="toc-text">同一行显示多条语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多个语句构成代码组"><span class="toc-text">多个语句构成代码组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Print-输出"><span class="toc-text">Print 输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import-与-from…import"><span class="toc-text">import 与 from…import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行参数"><span class="toc-text">命令行参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一行注释"><span class="toc-text">第一行注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#help-函数"><span class="toc-text">help() 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#“Windows-命令行窗口”下清屏"><span class="toc-text">“Windows 命令行窗口”下清屏</span></a></li></ol></li></ol>
     </div>
   </section>
 
