@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>Python3最基础使用 - 伊小宝</title>
+  
+    <meta name="keywords" content="语言学习,Python3">
+  
+  
+    <meta name="description" content="Python3 最基础使用">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/yinSpark/yinspark.github.io@master/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            伊小宝
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-home fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-home fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+        
+
+  
+    <meting-js
+      mini='true'
+      autoplay='true'
+      volume='0.7'
+      loop='all'
+      order='list'
+      server='netease'
+      type='song'
+      id='506092035'>
+    </meting-js>
+  
+
+
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">
+      Python3最基础使用
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="https://yinspark.github.io/" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>伊小宝</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>编程技术</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年6月24日</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>Python3 最基础使用</p>
+<a id="more"></a>
+
+<h2 id="查看Python3-版本"><a href="#查看Python3-版本" class="headerlink" title="查看Python3 版本"></a>查看Python3 版本</h2><p><code>python -V</code></p>
+<h2 id="Python3-基础语法"><a href="#Python3-基础语法" class="headerlink" title="Python3 基础语法"></a>Python3 基础语法</h2><h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>默认情况下，Python 3 源码文件以 UTF-8 编码，所有字符串都是 unicode 字符串。 当然你也可以为源码文件指定不同的编码：</p>
+<p><code># -*- coding: utf-8 -*-</code></p>
+<p>上述定义允许在源文件中使用 Windows-1252 字符集中的字符编码，对应适合语言为保加利亚语、白罗斯语、马其顿语、俄语、塞尔维亚语。</p>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><ul>
+<li>第一个字符必须是字母表中字母或下划线 _ 。</li>
+<li>标识符的其他的部分由字母、数字和下划线组成。</li>
+<li>标识符对大小写敏感。<br>在 Python 3 中，可以用中文作为变量名，非 ASCII 标识符也是允许的了。</li>
+</ul>
+<h3 id="python保留字"><a href="#python保留字" class="headerlink" title="python保留字"></a>python保留字</h3><p>保留字即关键字，我们不能把它们用作任何标识符名称。Python 的标准库提供了一个 keyword 模块，可以输出当前版本的所有关键字：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>&gt; import keyword</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; keyword.kwlist</span><br><span class="line">[<span class="string">'False'</span>, <span class="string">'None'</span>, <span class="string">'True'</span>, <span class="string">'and'</span>, <span class="string">'as'</span>, <span class="string">'assert'</span>, <span class="string">'break'</span>, <span class="string">'class'</span>, <span class="string">'continue'</span>, <span class="string">'def'</span>, <span class="string">'del'</span>, <span class="string">'elif'</span>, <span class="string">'else'</span>, <span class="string">'except'</span>, <span class="string">'finally'</span>, <span class="string">'for'</span>, <span class="string">'from'</span>, <span class="string">'global'</span>, <span class="string">'if'</span>, <span class="string">'import'</span>, <span class="string">'in'</span>, <span class="string">'is'</span>, <span class="string">'lambda'</span>, <span class="string">'nonlocal'</span>, <span class="string">'not'</span>, <span class="string">'or'</span>, <span class="string">'pass'</span>, <span class="string">'raise'</span>, <span class="string">'return'</span>, <span class="string">'try'</span>, <span class="string">'while'</span>, <span class="string">'with'</span>, <span class="string">'yield'</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>Python中单行注释以 # 开头，实例如下：</p>
+<figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line"># 第一个注释</span><br><span class="line">print (<span class="string">"Hello, Python!"</span>) # 第二个注释</span><br></pre></td></tr></table></figure>
+
+<p>多行注释可以用多个 # 号，还有 ‘’’ 和 “””：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 第一个注释</span></span><br><span class="line"><span class="comment"># 第二个注释</span></span><br><span class="line"> </span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">第三注释</span></span><br><span class="line"><span class="string">第四注释</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"> </span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">第五注释</span></span><br><span class="line"><span class="string">第六注释</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">print</span> (<span class="string">"Hello, Python!"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="行与缩进"><a href="#行与缩进" class="headerlink" title="行与缩进"></a>行与缩进</h3><p>python最具特色的就是使用缩进来表示代码块，不需要使用大括号 {} 。</p>
+<p>缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数。实例如下：python最具特色的就是使用缩进来表示代码块，不需要使用大括号 {} 。</p>
+<p>缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数。实例如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"True"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="builtin-name">print</span> (<span class="string">"False"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="多行语句"><a href="#多行语句" class="headerlink" title="多行语句"></a>多行语句</h3><p>Python 通常是一行写完一条语句，但如果语句很长，我们可以使用反斜杠()来实现多行语句，例如：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">total</span> = <span class="string">item_one + \</span></span><br><span class="line">        <span class="attr">item_two</span> <span class="string">+ \</span></span><br><span class="line">        <span class="attr">item_three</span></span><br></pre></td></tr></table></figure>
+
+<p>在 [], {}, 或 () 中的多行语句，不需要使用反斜杠()，例如：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">total</span> = [<span class="string">'item_one'</span>, <span class="string">'item_two'</span>, <span class="string">'item_three'</span>,</span><br><span class="line">        <span class="string">'item_four'</span>, <span class="string">'item_five'</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="数字-Number-类型"><a href="#数字-Number-类型" class="headerlink" title="数字(Number)类型"></a>数字(Number)类型</h3><p>python中数字有四种类型：整数、布尔型、浮点数和复数。</p>
+<ul>
+<li>int (整数), 如 1, 只有一种整数类型 int，表示为长整型，没有 python2 中的 Long。</li>
+<li>bool (布尔), 如 True。</li>
+<li>float (浮点数), 如 1.23、3E-2</li>
+<li>complex (复数), 如 1 + 2j、 1.1 + 2.2j</li>
+</ul>
+<h3 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串(String)"></a>字符串(String)</h3><ul>
+<li>python中单引号和双引号使用完全相同。</li>
+<li>使用三引号(‘’’或”””)可以指定一个多行字符串。</li>
+<li>转义符 ‘&#39;</li>
+<li>反斜杠可以用来转义，使用r可以让反斜杠不发生转义。。 如 r”this is a line with \n”  \n会显示，并不是换行。</li>
+<li>按字面意义级联字符串，如”this “ “is “ “string”会被自动转换为this is string。</li>
+<li>字符串可以用 + 运算符连接在一起，用 * 运算符重复。</li>
+<li>Python 中的字符串有两种索引方式，从左往右以 0 开始，从右往左以 -1 开始。</li>
+<li>Python中的字符串不能改变。</li>
+<li>Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。</li>
+<li>字符串的截取的语法格式如下：变量[头下标:尾下标:步长]</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">word</span> = <span class="string">'字符串'</span></span><br><span class="line"><span class="attr">sentence</span> = <span class="string">"这是一个句子。"</span></span><br><span class="line"><span class="attr">paragraph</span> = <span class="string">"""这是一个段落，</span></span><br><span class="line"><span class="string">可以由多行组成"""</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line">str=<span class="string">'Runoob'</span></span><br><span class="line"> </span><br><span class="line">print(str)                 <span class="comment"># 输出字符串</span></span><br><span class="line">print(str[<span class="number">0</span>:<span class="number">-1</span>])           <span class="comment"># 输出第一个到倒数第二个的所有字符</span></span><br><span class="line">print(str[<span class="number">0</span>])              <span class="comment"># 输出字符串第一个字符</span></span><br><span class="line">print(str[<span class="number">2</span>:<span class="number">5</span>])            <span class="comment"># 输出从第三个开始到第五个的字符</span></span><br><span class="line">print(str[<span class="number">2</span>:])             <span class="comment"># 输出从第三个开始后的所有字符</span></span><br><span class="line">print(str * <span class="number">2</span>)             <span class="comment"># 输出字符串两次</span></span><br><span class="line">print(str + <span class="string">'你好'</span>)        <span class="comment"># 连接字符串</span></span><br><span class="line"> </span><br><span class="line">print(<span class="string">'------------------------------'</span>)</span><br><span class="line"> </span><br><span class="line">print(<span class="string">'hello\nrunoob'</span>)      <span class="comment"># 使用反斜杠(\)+n转义特殊字符</span></span><br><span class="line">print(<span class="string">r'hello\nrunoob'</span>)     <span class="comment"># 在字符串前面添加一个 r，表示原始字符串，不会发生转义</span></span><br></pre></td></tr></table></figure>
+
+<p>这里的 r 指 raw，即 raw string。</p>
+<h3 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h3><p>函数之间或类的方法之间用空行分隔，表示一段新的代码的开始。类和函数入口之间也用一行空行分隔，以突出函数入口的开始。</p>
+<p>空行与代码缩进不同，空行并不是Python语法的一部分。书写时不插入空行，Python解释器运行也不会出错。但是空行的作用在于分隔两段不同功能或含义的代码，便于日后代码的维护或重构。</p>
+<p>记住：空行也是程序代码的一部分</p>
+<h3 id="等待用户输入"><a href="#等待用户输入" class="headerlink" title="等待用户输入"></a>等待用户输入</h3><p>执行下面的程序在按回车键后就会等待用户输入：执行下面的程序在按回车键后就会等待用户输入：</p>
+<figure class="highlight d"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line">input(<span class="string">"\n\n按下 enter 键后退出。"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>以上代码中 ，”\n\n”在结果输出前会输出两个新的空行。一旦用户按下 enter 键时，程序将退出。</p>
+<h3 id="同一行显示多条语句"><a href="#同一行显示多条语句" class="headerlink" title="同一行显示多条语句"></a>同一行显示多条语句</h3><p>Python可以在同一行中使用多条语句，语句之间使用分号(;)分割，以下是一个简单的实例：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line">import sys; x = <span class="string">'runoob'</span>; sys.<span class="keyword">stdout</span>.<span class="built_in">write</span>(x + <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用交互式命令行执行，输出结果为：使用交互式命令行执行，输出结果为：</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="meta"><span class="meta-keyword">import</span> sys;</span> x = <span class="string">'runoob'</span>; sys.stdout.write(x + <span class="string">'\n'</span>)</span><br><span class="line">runoob</span><br><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
+
+<p>此处的 7 表示字符数。</p>
+<h3 id="多个语句构成代码组"><a href="#多个语句构成代码组" class="headerlink" title="多个语句构成代码组"></a>多个语句构成代码组</h3><p>缩进相同的一组语句构成一个代码块，我们称之代码组。</p>
+<p>像if、while、def和class这样的复合语句，首行以关键字开始，以冒号( : )结束，该行之后的一行或多行代码构成代码组。</p>
+<p>我们将首行及后面的代码组称为一个子句(clause)。</p>
+<p>如下实例：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> expression : </span><br><span class="line">   suite</span><br><span class="line">elif expression : </span><br><span class="line">   suite </span><br><span class="line"><span class="keyword">else</span> : </span><br><span class="line">   suite</span><br></pre></td></tr></table></figure>
+
+<h3 id="Print-输出"><a href="#Print-输出" class="headerlink" title="Print 输出"></a>Print 输出</h3><p>print 默认输出是换行的，如果要实现不换行需要在变量末尾加上 end=””：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"> </span><br><span class="line"><span class="attribute">x</span>=<span class="string">"a"</span></span><br><span class="line"><span class="attribute">y</span>=<span class="string">"b"</span></span><br><span class="line"><span class="comment"># 换行输出</span></span><br><span class="line"><span class="builtin-name">print</span>( x )</span><br><span class="line"><span class="builtin-name">print</span>( y )</span><br><span class="line"> </span><br><span class="line"><span class="builtin-name">print</span>(<span class="string">'---------'</span>)</span><br><span class="line"><span class="comment"># 不换行输出</span></span><br><span class="line"><span class="builtin-name">print</span>( x, <span class="attribute">end</span>=<span class="string">" "</span> )</span><br><span class="line"><span class="builtin-name">print</span>( y, <span class="attribute">end</span>=<span class="string">" "</span> )</span><br><span class="line"><span class="builtin-name">print</span>()</span><br></pre></td></tr></table></figure>
+
+<h3 id="import-与-from…import"><a href="#import-与-from…import" class="headerlink" title="import 与 from…import"></a>import 与 from…import</h3><p>在 python 用 import 或者 from…import 来导入相应的模块。</p>
+<p>将整个模块(somemodule)导入，格式为： import somemodule</p>
+<p>从某个模块中导入某个函数,格式为： from somemodule import somefunction</p>
+<p>从某个模块中导入多个函数,格式为： from somemodule import firstfunc, secondfunc, thirdfunc</p>
+<p>将某个模块中的全部函数导入，格式为： from somemodule import *</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line"><span class="builtin-name">print</span>(<span class="string">'================Python import mode=========================='</span>)</span><br><span class="line"><span class="builtin-name">print</span> (<span class="string">'命令行参数为:'</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> sys.argv:</span><br><span class="line">    <span class="builtin-name">print</span> (i)</span><br><span class="line"><span class="builtin-name">print</span> (<span class="string">'\n python 路径为'</span>,sys.path)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> argv,path  <span class="comment">#  导入特定的成员</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">'================python from import==================================='</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'path:'</span>,path) <span class="comment"># 因为已经导入path成员，所以此处引用时不需要加sys.path</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h3><p>很多程序可以执行一些操作来查看一些基本信息，Python可以使用-h参数查看各参数帮助信息：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">python</span> -h</span><br><span class="line">usage: <span class="keyword">python</span> [option] ... [-<span class="keyword">c</span> cmd | -<span class="keyword">m</span> <span class="keyword">mod</span> | <span class="keyword">file</span> | -] [arg] ...</span><br><span class="line">Options <span class="built_in">and</span> arguments (<span class="built_in">and</span> corresponding environment variables):</span><br><span class="line">-<span class="keyword">c</span> cmd : program passed in <span class="keyword">as</span> <span class="built_in">string</span> (terminates option <span class="keyword">list</span>)</span><br><span class="line">-d     : <span class="keyword">debug</span> output from parser (also PYTHONDEBUG=<span class="keyword">x</span>)</span><br><span class="line">-E     : ignore environment variables (such <span class="keyword">as</span> PYTHONPATH)</span><br><span class="line">-h     : <span class="keyword">print</span> this <span class="keyword">help</span> message <span class="built_in">and</span> <span class="keyword">exit</span></span><br><span class="line"></span><br><span class="line">[ etc. ]</span><br></pre></td></tr></table></figure>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 伊小宝-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/>https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/yinSpark/awesome-yinspark@master/images/WeiChatPay.png'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/yinSpark/awesome-yinspark@master/images/Alipay.png'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-24T09:07:17+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年6月24日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>语言学习</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python3/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python3</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3最基础使用 - 伊小宝&summary=Python3 最基础使用"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3最基础使用 - 伊小宝&summary=Python3 最基础使用"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://yinspark.github.io/2020/06/24/Python3%E6%9C%80%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/&title=Python3最基础使用 - 伊小宝&summary=Python3 最基础使用"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/06/24/Python3%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python3命令行参数</p>
+                <p class='content'>getopt模块
+
+
+Python3 命令行参数Python 提供了 getopt 模块来获取命令行参数。
+1$ python test.py arg1 arg2 arg3
+
+Python 中也...</p>
+              </a>
+            
+            
+              <a class='next' href='/2020/05/24/Volantis%E4%B8%BB%E9%A2%98%E4%B8%8B%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2/'>
+                <p class='title'>Volantis 主题下优化博客<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>CDN 加速、主页文章只显示摘要
+
+
+一、免费 CDN 搭建jsDelivr + Github 是免费且好用的CDN。使用方法：https://cdn.jsdelivr.net/gh/你的用户名...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Python3最基础使用',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#查看Python3-版本"><span class="toc-text">查看Python3 版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python3-基础语法"><span class="toc-text">Python3 基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编码"><span class="toc-text">编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python保留字"><span class="toc-text">python保留字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行与缩进"><span class="toc-text">行与缩进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多行语句"><span class="toc-text">多行语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字-Number-类型"><span class="toc-text">数字(Number)类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串-String"><span class="toc-text">字符串(String)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空行"><span class="toc-text">空行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#等待用户输入"><span class="toc-text">等待用户输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同一行显示多条语句"><span class="toc-text">同一行显示多条语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多个语句构成代码组"><span class="toc-text">多个语句构成代码组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Print-输出"><span class="toc-text">Print 输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import-与-from…import"><span class="toc-text">import 与 from…import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行参数"><span class="toc-text">命令行参数</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='340px'
+      server='netease'
+      type='playlist'
+      id='3175833810'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:me@xaoxuu.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/yinSpark"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=335543204"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">伊小宝-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://yinspark.github.io/">Copyright © 2017-2020 yinSpark</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '8px',
+        duration: '800',
+        interval: '100',
+        scale: '1'
+      });
+    });
+  </script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/35F12181-F0E9-45BD-B134-37E4B4A660CF.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B951AE18-D431-417F-B3FE-A382403FF21B.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/AEB33F9D-7294-4CF1-B8C5-3020748A9D45.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/2884F904-F1F3-479E-AE27-5EBC291B63B0.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/10A0FCE5-36A1-4AD0-8CF0-019259A89E03.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/250662D4-5A21-4AAA-BB63-CD25CF97CFF1.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/landscape/298468D7-E388-44A8-8CC5-8213BDC33CED.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('') {
+          $('').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "dogUA2FSKGTo029M1SEwGROT-MdYXbMMI",
+    appKey: "u0NdtQ8nvHoMdJPSYqm1LRxE",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'false',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.6.5/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.6.5/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 标准 markdown 描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
